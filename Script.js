@@ -39,4 +39,4 @@ function setBoxBGColor(colorBox, red, green, blue) {
         redVal.innerText = red;
         greenVal.innerText = green;
         blueVal.innerText = blue;
-    }
+    }}

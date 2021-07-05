@@ -2,7 +2,7 @@ window.onload = function () {
     initColorPicker();
 };
 
-function initColorPicker () {
+function initColorPicker() {
     let colorBox = document.getElementById("color-box");
     let rgb = {
         red: document.getElementById("red"),
@@ -10,15 +10,18 @@ function initColorPicker () {
         green: document.getElementById("green")
     };
     let colorPickers = document.getElementsByClassName("picker");
-
     setColorPickerEventListeners(colorBox, rgb, colorPickers);
 }
 
-function setColorPickerEventListeners(colorBox, rgb, pickerElements,) {
-
-    for (let i = 0; i < pickerElements.length; i++) {
+function setColorPickerEventListeners(colorBox, rgb, pickerElements) {
+    let pickerLen = pickerElements.length;
+    for (let i = 0; i < pickerLen; i++) {
         pickerElements[i].addEventListener('change', () => {
-            setBGBoxColor(colorBox, rgb.red.value, rgb.green.value, rgb.blue.value);
+            console.log("Red value: ", rgb.red.value);
+            let red = rgb.red.value;
+            let blue = rgb.blue.value;
+            let green = rgb.green.value;
+            setBGBoxColor(colorBox, red, green, blue);
         });
     }
 

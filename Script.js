@@ -31,7 +31,7 @@ function setBoxBGColor(colorBox, red, green, blue) {
     colorBox.style.backgroundColor = "rgb(" + rgbVal = ")";
 }
 
-    function setDisplayValues(red, green, blue) {
+ function setDisplayValues(red, green, blue) {
         let redVal = document.getElementById("redVal");
         let greenVal = document.getElementById("greenVal");
         let blueVal = document.getElementById("blueVal");

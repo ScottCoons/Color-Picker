@@ -9,17 +9,22 @@ function initColorPicker () {
         blue: document.getElementById("blue"),
         green: document.getElementById("green")
     };
-    setColorPickerEventListeners(colorBox, rgb);
+    let colorPickers = document.getElementsByClassName("picker");
+
+    setColorPickerEventListeners(colorBox, rgb, colorPickers);
 }
 
-function setColorPickerEventListeners(colorBox, rgb) {
-    rgb.red.addEventListener('change', () => {
-        console.log("Red value: ", rgb.red.value);
-    })
-    rgb.blue.addEventListener('change', () => {
-        console.log("Blue value: ", rgb.blue.value);
-    })
-    rgb.green.addEventListener('change', () => {
-        console.log("Green value: ", rgb.green.value);
-    })
+function setColorPickerEventListeners(colorBox, rgb, pickerElements,) {
+
+    for (let i = 0; i < pickerElements.length; i++) {
+        pickerElements[i].addEventListener('change', () => {
+            setBGBoxColor(colorBox, rgb.red.value, rgb.green.value, rgb.blue.value);
+        });
+    }
+
+
+
+function setBoxBGColor(colorBox, red, gree, blue) {
+    rgbVal = [red, green, blue].join(',');
+    colorBox.style.backgroundColor = "rgb(" + rgbVal = ")";
 }

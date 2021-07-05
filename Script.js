@@ -21,7 +21,7 @@ function setColorPickerEventListeners(colorBox, rgb, pickerElements) {
             let red = rgb.red.value;
             let blue = rgb.blue.value;
             let green = rgb.green.value;
-            setBGBoxColor(colorBox, red, green, blue);
+            setBoxBGColor(colorBox, red, green, blue);
             setDisplayValues(red, green, blue)
         });
     }

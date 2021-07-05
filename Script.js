@@ -24,7 +24,7 @@ function setColorPickerEventListeners(colorBox, rgb, pickerElements,) {
 
 
 
-function setBoxBGColor(colorBox, red, gree, blue) {
+function setBoxBGColor(colorBox, red, green, blue) {
     rgbVal = [red, green, blue].join(',');
     colorBox.style.backgroundColor = "rgb(" + rgbVal = ")";
 }

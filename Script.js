@@ -26,9 +26,9 @@ function setColorPickerEventListeners(colorBox, rgb, pickerElements) {
         });
     }
 
-function setBoxBGColor(colorBox, 123, 123, 123) {
+function setBoxBGColor(colorBox, red, green, blue) {
     let rgbVal = [red, green, blue].join(',');
-    colorBox.style.backgroundColor = "rgb(" + rgbVal = ")";
+    colorBox.style.backgroundColor = "rgb(" + rgbVal + ")";
 }
 
  function setDisplayValues(red, green, blue) {
